@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Beyond Frontiers: Scene-Anomaly Guided Autonomous Exploration"
+    />
+    <meta
+      name="keywords"
+      content="Beyond Frontiers, Exploration, Robotics, Computer Vision, Mapping, IIITH, RRC"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Beyond Frontiers: Scene-Anomaly Guided Autonomous Exploration</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ADD-ID-HERE"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-ADD-ID-HERE");
+    </script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/index.css" />
+    <link rel="icon" href="./static/images/favicon.png" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+  </head>
+
+  <body>
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              Beyond Frontiers: Scene-Anomaly Guided Autonomous Exploration
+            </h1>
+            <h1 class="title is-4 publication-title">IROS 2026</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://akash-kumbar.github.io/"
+                  >Akash Kumbar</a
+                >,
+              </span>
+              <span class="author-block">
+                <a href="https://abhinav7r.github.io/"
+                  >Abhinav Raundhal</a
+                >,
+              </span>
+              <span class="author-block">
+                <a href="https://madhavak-iiith.github.io/"
+                  >Madhava Krishna</a
+                >
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <!-- RRC, IIIT Hyderabad -->
+                <a href="https://robotics.iiit.ac.in/"> RRC, IIIT Hyderabad </a>
+              </span>
+              <br />
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <!-- <a
+                    href="./static/paper/BeyondFrontiers.pdf"
+                    class="external-link button is-normal is-rounded is-dark"
+                  > -->
+                  <a
+                    href="index.html"
+                    class="external-link button is-normal is-rounded is-dark"
+                  >
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <!-- <a
+                    href="https://arxiv.org/abs/"
+                    class="external-link button is-normal is-rounded is-dark"
+                  > -->
+                  <a
+                    href="index.html"
+                    class="external-link button is-normal is-rounded is-dark"
+                  >
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                <a href="https://www.youtube.com/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <!-- <a
+                    href="https://github.com/beyond-frontiers/beyond-frontiers"
+                    class="external-link button is-normal is-rounded is-dark"
+                  > -->
+                  <a
+                    href="index.html"
+                    class="external-link button is-normal is-rounded is-dark"
+                  >
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </section> -->
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img id="teaser" src="./static/images/teaser.png" height="100%" />
+          <h2 class="subtitle has-text-centered">
+            Scene-Anomaly Guided Exploration. <b>SCAGE</b> 
+            uses <b>&Delta;-Net</b> to predict scene anomalies: 
+            unexplored or poorly reconstructed regions, and guide the 
+            robot to the optimal next-best-view. This approach achieves 
+            superior volumetric coverage over existing methods 
+            while simultaneously preserving high-fidelity geometric 
+            details that traditional frontier-based methods overlook.
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Autonomous exploration of unknown 3D environments 
+                is traditionally driven by coverage-maximizing geometric
+                heuristics. However, these methods typically determine 
+                exploration targets without considering the underlying structural
+                context. This leads to inefficient trajectories often limiting the
+                fidelity of the final 3D reconstruction. To bridge the gap between
+                spatial coverage and reconstruction quality, we introduce a
+                paradigm shift: reframing exploration as a geometric anomaly
+                minimization problem.
+              </p>
+              <p>
+                We present SCAGE: SCene Anomaly
+                Guided Exploration, a novel autonomous exploration framework 
+                that operates directly on unstructured 3D point clouds.
+                Instead of blindly chasing volumetric boundaries, we equip the
+                robot with a foundational understanding of standard indoor
+                architecture. As the robot navigates, it continuously evaluates
+                its live 3D observations against these learned expectations.
+                When the incoming geometry contradicts the learned priors
+                of a typical indoor environment, such as a fragmented wall
+                or a partial table, the system flags these regions as 
+                <i>scene anomalies</i>. These geometric inconsistencies act as a guiding
+                signal, naturally drawing the robot to investigate and resolve
+                these structural anomalies from optimal vantage points. By
+                actively targeting poorly reconstructed regions rather than just
+                empty space, our approach seamlessly couples spatial discovery
+                with high-fidelity mapping. Extensive evaluations demonstrate
+                that SCAGE achieves superior volumetric coverage (~90% in
+                all scenes) and higher 3D reconstruction quality compared to
+                state-of-the-art baselines.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--/ Abstract. -->
+
+        <!-- Paper video. -->
+        <!-- <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/"
+                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div> -->
+        <!--/ Paper video. -->
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">SCAGE Overview</h2>
+            <div class="content has-text-justified">
+                <ul>
+                    <li><strong>Training &Delta;-Net (Top):</strong> We train the network to predict 
+                      point-wise distribution shifts (&Delta;&rho;). By applying synthetic transformations 
+                      (noise, shearing, masking) to ground-truth point clouds (&rho;<sub>gt</sub>), 
+                      &Delta;-Net learns to map corrupted inputs back to their true geometry, optimized 
+                      via Chamfer Distance.</li>
+                    <li><strong>Anomaly-Guided Exploration (Bottom):</strong> During exploration, 
+                      &Delta;-Net processes partial 3D observations from the current pose (P<sub>1</sub>) to 
+                      identify high-uncertainty "Scene Anomalies" (A). The system spawns candidate cameras 
+                      to target these regions, driving the robot to the optimal next-best-view (P<sub>2</sub>) 
+                      to capture missing data and resolve the anomalies (B &rarr; C).</li>
+                </ul>
+              <img src="./static/images/method.png" alt="SCAGE Methodology" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Exploration: Coverage and Trajectory</h2>
+            <video autoplay controls muted loop playsinline width="100%">
+              <source src="./static/images/exploration.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Reconstruction Quality Comparisons</h2>
+            <!-- <h3 class="subtitle is-6">Reconstruction quality</h3> -->
+            <!-- Tabs -->
+            <div class="tabs is-toggle">
+              <ul id="dataset-tabs">
+                <li class="is-active" data-target="dataset1"><a>Classical vs. Ours</a></li>
+                <li data-target="dataset2"><a>NBVP vs. Ours</a></li>
+                <li data-target="dataset3"><a>FrontierNet vs. Ours</a></li>
+              </ul>
+            </div>
+
+            <!-- Dataset Panels -->
+            <div id="dataset-panels">
+              <div id="dataset1" class="dataset-panel is-active">
+                <div class="columns is-centered">
+                  <div class="column is-half">
+                    <div id="ds1_comp1" class="bal-container-small">
+                      <div class="bal-after">
+                        <img src="static/comparisons/ours-1.png" />
+                        <div class="bal-afterPosition afterLabel">
+                          SCAGE (Ours)
+                        </div>
+                      </div>
+                      <div class="bal-before">
+                        <div class="bal-before-inset">
+                          <img
+                            src="static/comparisons/classical-1.png"
+                          />
+                          <div class="bal-beforePosition beforeLabel">Classical</div>
+                        </div>
+                      </div>
+                      <div class="bal-handle">
+                        <span class="handle-left-arrow"></span>
+                        <span class="handle-right-arrow"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column is-half">
+                    <div id="ds1_comp2" class="bal-container-small">
+                      <div class="bal-after">
+                        <img src="static/comparisons/ours-2.png" />
+                        <div class="bal-afterPosition afterLabel">
+                          SCAGE (Ours)
+                        </div>
+                      </div>
+                      <div class="bal-before">
+                        <div class="bal-before-inset">
+                          <img
+                            src="static/comparisons/classical-2.png"
+                          />
+                          <div class="bal-beforePosition beforeLabel">Classical</div>
+                        </div>
+                      </div>
+                      <div class="bal-handle">
+                        <span class="handle-left-arrow"></span>
+                        <span class="handle-right-arrow"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="dataset2" class="dataset-panel">
+                <div class="columns is-centered">
+                  <div class="column is-half">
+                    <div id="ds2_comp1" class="bal-container-small">
+                      <div class="bal-after">
+                        <img src="static/comparisons/ours-1.png" />
+                        <div class="bal-afterPosition afterLabel">
+                          SCAGE (Ours)
+                        </div>
+                      </div>
+                      <div class="bal-before">
+                        <div class="bal-before-inset">
+                          <img src="static/comparisons/nbvp-1.png" />
+                          <div class="bal-beforePosition beforeLabel">NBVP</div>
+                        </div>
+                      </div>
+                      <div class="bal-handle">
+                        <span class="handle-left-arrow"></span>
+                        <span class="handle-right-arrow"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="column is-half">
+                    <div id="ds2_comp2" class="bal-container-small">
+                      <div class="bal-after">
+                        <img src="static/comparisons/ours-2.png" />
+                        <div class="bal-afterPosition afterLabel">
+                          SCAGE (Ours)
+                        </div>
+                      </div>
+                      <div class="bal-before">
+                        <div class="bal-before-inset">
+                          <img src="static/comparisons/nbvp-2.png" />
+                          <div class="bal-beforePosition beforeLabel">NBVP</div>
+                        </div>
+                      </div>
+                      <div class="bal-handle">
+                        <span class="handle-left-arrow"></span>
+                        <span class="handle-right-arrow"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="dataset3" class="dataset-panel">
+                <div class="columns is-centered">
+                  <div class="column is-half">
+                    <div id="ds3_comp1" class="bal-container-small">
+                      <div class="bal-after">
+                        <img src="static/comparisons/ours-1.png" />
+                        <div class="bal-afterPosition afterLabel">
+                          SCAGE (Ours)
+                        </div>
+                      </div>
+                      <div class="bal-before">
+                        <div class="bal-before-inset">
+                          <img src="static/comparisons/frontiernet-1.png" />
+                          <div class="bal-beforePosition beforeLabel">FrontierNet</div>
+                        </div>
+                      </div>
+                      <div class="bal-handle">
+                        <span class="handle-left-arrow"></span>
+                        <span class="handle-right-arrow"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column is-half">
+                    <div id="ds3_comp2" class="bal-container-small">
+                      <div class="bal-after">
+                        <img src="static/comparisons/ours-2.png" />
+                        <div class="bal-afterPosition afterLabel">
+                          SCAGE (Ours)
+                        </div>
+                      </div>
+                      <div class="bal-before">
+                        <div class="bal-before-inset">
+                          <img src="static/comparisons/frontiernet-2.png" />
+                          <div class="bal-beforePosition beforeLabel">FrontierNet</div>
+                        </div>
+                      </div>
+                      <div class="bal-handle">
+                        <span class="handle-left-arrow"></span>
+                        <span class="handle-right-arrow"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Quantitative Results</h2>
+            <div class="columns is-centered">
+              <img
+                src="./static/images/quantitative-results.png"
+                alt="Quantitative Results"
+              />
+            </div>
+              <p>
+                SCAGE significantly outperforms baseline methods 
+                in both volumetric coverage (~90% average) and 
+                3D reconstruction quality, halving the average 
+                Chamfer distance error. Furthermore, low standard 
+                deviations demonstrate high robustness to varying 
+                initial positions, even when relying on estimated 
+                depth (SCAGE*)
+              </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-5">Acknowledgements</h2>
+            <p class="has-text-justified">
+              The authors acknowledge the support provided by MeitY,
+              Govt. of India, under the project "Capacity Building for
+              Human Resource Development in Unmanned Aircraft System
+              (Drone and Related Technology)."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@InProceedings{BeyondFrontiers_2026_IROS,
+  author    = {Kumbar, Akash and Raundhal, Abhinav and Krishna, Madhava},
+  title     = {Beyond Frontiers: Scene-Anomaly Guided Autonomous Exploration},
+  booktitle = {2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year      = {2026},
+}</code></pre>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <!-- <a class="icon-link" href="./static/paper/beyond-frontiers.pdf">
+            <i class="fas fa-file-pdf"></i>
+          </a> -->
+          <a class="icon-link" href="index.html">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a
+            class="icon-link"
+            href="https://github.com/beyond-frontiers"
+            class="external-link"
+            disabled
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This website was adapted from
+                <a href="https://github.com/nerfies/nerfies.github.io"
+                  >Nerfies</a
+                >
+                and is licensed under a
+                <a
+                  rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  >Creative Commons Attribution-ShareAlike 4.0 International
+                  License</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+
+    <script>
+      new BeforeAfter({
+        id: "#ds1_comp1",
+      });
+      new BeforeAfter({
+        id: "#ds1_comp2",
+      });
+      new BeforeAfter({
+        id: "#ds2_comp1",
+      });
+      new BeforeAfter({
+        id: "#ds2_comp2",
+      });
+      new BeforeAfter({
+        id: "#ds3_comp1",
+      });
+      new BeforeAfter({
+        id: "#ds3_comp2",
+      });
+    </script>
+  </body>
+</html>
