@@ -13,20 +13,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Beyond Frontiers: Scene-Anomaly Guided Autonomous Exploration</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-ADD-ID-HERE"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-80NFXYDK4R"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-      gtag("config", "G-ADD-ID-HERE");
+      gtag('config', 'G-80NFXYDK4R');
     </script>
 
     <link
@@ -91,12 +85,8 @@
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <!-- <a
-                    href="./static/paper/BeyondFrontiers.pdf"
-                    class="external-link button is-normal is-rounded is-dark"
-                  > -->
                   <a
-                    href="index.html"
+                    href="./static/paper/beyondfrontiers.pdf"
                     class="external-link button is-normal is-rounded is-dark"
                   >
                     <span class="icon">
@@ -106,12 +96,8 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <!-- <a
-                    href="https://arxiv.org/abs/"
-                    class="external-link button is-normal is-rounded is-dark"
-                  > -->
                   <a
-                    href="index.html"
+                    href="https://arxiv.org/abs/2607.15828"
                     class="external-link button is-normal is-rounded is-dark"
                   >
                     <span class="icon">
@@ -132,18 +118,14 @@
               </span> -->
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <!-- <a
-                    href="https://github.com/beyond-frontiers/beyond-frontiers"
-                    class="external-link button is-normal is-rounded is-dark"
-                  > -->
                   <a
-                    href="index.html"
+                    href="https://github.com/beyondfrontiers/Beyond-Frontiers"
                     class="external-link button is-normal is-rounded is-dark"
                   >
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Code (Coming soon!)</span>
                   </a>
                 </span>
               </div>
@@ -185,8 +167,8 @@
                 exploration targets without considering the underlying structural
                 context. This leads to inefficient trajectories often limiting the
                 fidelity of the final 3D reconstruction. To bridge the gap between
-                spatial coverage and reconstruction quality, we introduce a
-                paradigm shift: reframing exploration as a geometric anomaly
+                spatial coverage and reconstruction quality, we introduce a novel
+                paradigm: reframing exploration as a geometric anomaly
                 minimization problem.
               </p>
               <p>
@@ -260,6 +242,11 @@
           <div class="column is-full-width">
             <h2 class="title is-3">Exploration: Coverage and Trajectory</h2>
             <video autoplay controls muted loop playsinline width="100%">
+              <source src="./static/images/anomalies.mp4" type="video/mp4">
+            </video>
+            <!-- some vertical space -->
+            <div style="height: 20px;"></div>
+            <video autoplay controls muted loop playsinline width="100%">
               <source src="./static/images/exploration.mp4" type="video/mp4">
             </video>
           </div>
@@ -267,6 +254,21 @@
       </div>
     </section>
 
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Real World Results</h2>
+            <video autoplay controls muted loop playsinline width="100%">
+              <source src="./static/images/real_world.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-justified">
+              Note: The anomalies that still exist as indicated by red spots are due to the physical limitation of the robot to reach those areas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section">
       <div class="container is-max-desktop">
@@ -425,6 +427,9 @@
                 </div>
               </div>
             </div>
+            <p class="has-text-justified">
+              We are able to reconstruct completely all elements that compose a house: not just chairs, dining tables and beds but floor and ceiling as well; while other methods are only able to achieve partial reconstruction.
+            </p>
           </div>
         </div>
       </div>
@@ -486,15 +491,12 @@
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">
-          <!-- <a class="icon-link" href="./static/paper/beyond-frontiers.pdf">
-            <i class="fas fa-file-pdf"></i>
-          </a> -->
-          <a class="icon-link" href="index.html">
+          <a class="icon-link" href="./static/paper/beyondfrontiers.pdf">
             <i class="fas fa-file-pdf"></i>
           </a>
           <a
             class="icon-link"
-            href="https://github.com/beyond-frontiers"
+            href="https://github.com/beyondfrontiers"
             class="external-link"
             disabled
           >
